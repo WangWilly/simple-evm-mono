@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "outDir": "./dist"
   },
-  "include": ["src/**/*", "test/**/*", "./typechain", "./abi/**/*.json", "./files/*.json"],
+  "include": ["test/**/*", "./typechain", "./abi/**/*.json", "./files/*.json"],
   "exclude": ["node_modules", "dist"],
   "files": ["./hardhat.config.ts"]
 }
