@@ -42,3 +42,4 @@ References:
 
 - https://hardhat.org/tutorial/creating-a-new-hardhat-project#3.-creating-a-new-hardhat-project
 - https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity
+- https://hardhat.org/tutorial/deploying-to-a-live-network
