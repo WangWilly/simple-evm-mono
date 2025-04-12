@@ -14,6 +14,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "node ./__tests__/contracts.test.js"
+    "test": "node ./__tests__/contracts.test.js",
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/index.js"
   }
 }
