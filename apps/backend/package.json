@@ -1,20 +1,13 @@
 {
   "name": "backend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "backend to connect eth contracts",
   "author": "WangWilly <s89667654@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/backend.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
+  "main": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
-    "test": "node ./__tests__/backend.test.js",
     "build": "tsc --project tsconfig.json",
     "start": "node dist/index.js"
   },

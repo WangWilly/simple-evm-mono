@@ -18,11 +18,13 @@ npx lerna run test --scope contracts
 ```
 
 References:
+
 - https://ethereum.stackexchange.com/questions/123172/proper-project-structure-for-react-hardhat-typechain
 
 ## Tests
 
 Fill in the `template.env` file with your own values and create a `.env` file. Then run the following command to start the local server:
+
 ```bash
 npx lerna run build --scope backend
 npx lerna run start --scope backend
@@ -31,6 +33,7 @@ npx lerna run start --scope backend
 ### Store message
 
 Command to run the test:
+
 ```bash
 curl --location 'http://localhost:3000/api/store-message' \
 --header 'Content-Type: application/json' \
@@ -40,25 +43,28 @@ curl --location 'http://localhost:3000/api/store-message' \
 ```
 
 Response:
+
 ```json
 {
-    "success": true,
-    "transactionHash": "0xc713af8fc6a077db39ee53dda58140151fc8b833f386ab301034dcd7f6bd44ad"
+  "success": true,
+  "transactionHash": "0xc713af8fc6a077db39ee53dda58140151fc8b833f386ab301034dcd7f6bd44ad"
 }
 ```
 
 ### Get message
 
 Command to run the test:
+
 ```bash
 curl --location 'http://localhost:3000/api/retrieve-message' \
 --data ''
 ```
 
 Response:
+
 ```json
 {
-    "message": "test"
+  "message": "test"
 }
 ```
 
@@ -77,6 +83,7 @@ npx lerna run <command> --scope <package-name>
 ```
 
 References:
+
 - https://lerna.js.org/docs/legacy-package-management#replacing-your-usage-of-lerna-add
 
 ## Hardhat
