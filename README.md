@@ -7,12 +7,11 @@
 npm install
 
 # Build the project
-npx lerna run build
+npx lerna run build --scope backend
 npx lerna run build:sol --scope contracts
 
 # Run the project
-npx lerna run start
-npx lerna run start --scope {backend|contracts}
+npx lerna run start --scope backend
 
 # Run tests
 npx lerna run test --scope contracts
