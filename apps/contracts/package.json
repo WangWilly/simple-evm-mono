@@ -14,8 +14,23 @@
     "lib"
   ],
   "scripts": {
-    "test": "node ./__tests__/contracts.test.js",
     "build": "tsc --project tsconfig.json",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "build:sol": "npx hardhat compile",
+    "test": "npx hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@typechain/ethers-v5": "^10.2.1",
+    "@typechain/hardhat": "^6.0.0",
+    "@types/chai": "^4.3.20",
+    "chai": "^4.5.0",
+    "ethers": "^5.8.0",
+    "hardhat": "^2.23.0",
+    "hardhat-gas-reporter": "^1.0.10",
+    "solidity-coverage": "^0.8.14",
+    "typechain": "^8.3.2"
   }
 }
