@@ -17,7 +17,8 @@
     "build": "tsc --project tsconfig.json",
     "start": "node dist/index.js",
     "build:sol": "npx hardhat compile",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "deploy:sepolia": "npx hardhat ignition deploy ./ignition/modules/deployMessageStore.ts --network sepolia"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^0.15.11",
