@@ -1,11 +1,46 @@
 # Simple EVM Mono
 
-## [Lerna](https://lerna.js.org/docs/lerna-and-nx) build and run
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Ethereum](https://img.shields.io/badge/Ethereum-Enabled-brightgreen.svg)
+
+A monorepo solution for Ethereum Virtual Machine (EVM) development with integrated tooling for smart contracts and backend services.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Development Workflow](#development-workflow)
+- [Testing](#testing)
+  - [API Endpoints](#api-endpoints)
+- [Package Management](#package-management)
+- [Resources](#resources)
+
+## Overview
+
+This monorepo uses Lerna to manage multiple packages for EVM development, including smart contracts and backend services. The architecture promotes code reuse and maintains a consistent development environment across all project components.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v20 or higher)
+- npm (v10 or higher)
+
+### Installation
 
 ```bash
 # Install dependencies
 npm install
+```
 
+## Development Workflow
+
+Before start, create a `.env` file based on the provided `template.env` file with your configuration values. Then start the local server:
+
+```bash
 # Run the project in development mode
 npx lerna run dev --scope backend
 
@@ -20,22 +55,20 @@ npx lerna run start --scope backend
 npx lerna run test --scope contracts
 ```
 
-References:
+## Testing
 
-- https://ethereum.stackexchange.com/questions/123172/proper-project-structure-for-react-hardhat-typechain
-
-## Tests
-
-Fill in the `template.env` file with your own values and create a `.env` file. Then run the following command to start the local server:
+Before testing, create a `.env` file based on the provided `template.env` file with your configuration values. Then start the local server:
 
 ```bash
 npx lerna run build --scope backend
 npx lerna run start --scope backend
 ```
 
-### Store message
+### API Endpoints
 
-Command to run the test:
+#### Store Message
+
+**Request:**
 
 ```bash
 curl --location 'http://localhost:3000/api/store-message' \
@@ -45,7 +78,7 @@ curl --location 'http://localhost:3000/api/store-message' \
 }'
 ```
 
-Response:
+**Response:**
 
 ```json
 {
@@ -54,16 +87,16 @@ Response:
 }
 ```
 
-### Get message
+#### Retrieve Message
 
-Command to run the test:
+**Request:**
 
 ```bash
 curl --location 'http://localhost:3000/api/retrieve-message' \
 --data ''
 ```
 
-Response:
+**Response:**
 
 ```json
 {
@@ -71,10 +104,10 @@ Response:
 }
 ```
 
-## Common [Lerna](https://lerna.js.org/docs/lerna-and-nx) commands
+## Package Management
 
 ```bash
-# Add a dependency to all packages
+# Add a dependency to specific packages
 npm install <dependency> -w <package>
 npm install <dependency> -w <package1> -w <package2>
 
@@ -85,12 +118,11 @@ npx lerna run <command>
 npx lerna run <command> --scope <package-name>
 ```
 
-References:
+## Resources
 
-- https://lerna.js.org/docs/legacy-package-management#replacing-your-usage-of-lerna-add
-
-## Hardhat
-
-- https://hardhat.org/tutorial/creating-a-new-hardhat-project#3.-creating-a-new-hardhat-project
-- https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity
-- https://hardhat.org/tutorial/deploying-to-a-live-network
+- [Project Structure for React + Hardhat + TypeChain](https://ethereum.stackexchange.com/questions/123172/proper-project-structure-for-react-hardhat-typechain)
+- [Lerna Documentation](https://lerna.js.org/docs/lerna-and-nx)
+- [Lerna Package Management](https://lerna.js.org/docs/legacy-package-management#replacing-your-usage-of-lerna-add)
+- [Hardhat Project Setup](https://hardhat.org/tutorial/creating-a-new-hardhat-project#3.-creating-a-new-hardhat-project)
+- [Hardhat Solidity VS Code Extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity)
+- [Hardhat Live Network Deployment](https://hardhat.org/tutorial/deploying-to-a-live-network)
