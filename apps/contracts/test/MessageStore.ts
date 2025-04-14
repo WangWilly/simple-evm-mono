@@ -15,9 +15,7 @@ describe("MessageStore", function () {
 
   describe("Deployment", function () {
     it("Should successfully deploy the contract", async function () {
-      const { messageStore } = await loadFixture(
-        deployMessageStoreFixture
-      );
+      const { messageStore } = await loadFixture(deployMessageStoreFixture);
 
       expect(messageStore.address).to.properAddress;
     });

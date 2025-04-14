@@ -6,6 +6,9 @@
 # Install dependencies
 npm install
 
+# Run the project in development mode
+npx lerna run dev --scope backend
+
 # Build the project
 npx lerna run build --scope backend
 npx lerna run build:sol --scope contracts
