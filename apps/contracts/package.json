@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "evm contracts",
   "author": "WangWilly <s89667654@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "directories": {
     "test": "test"
   },
